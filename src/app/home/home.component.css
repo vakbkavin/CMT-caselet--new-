@@ -1,0 +1,31 @@
+.navbar{
+  padding-top: 0;
+}
+
+nav{
+  padding-bottom: 0;
+}
+.nav-link{
+  border-bottom: 4px solid transparent;
+  color:#616060;
+}
+
+.nav-link:hover, a:active {
+  border-bottom: 4px solid #ED3907;
+  color: black;
+  font-weight: bold;
+}
+
+.btn-filter {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+
+  cursor: pointer;
+  border-radius: 16px;
+}

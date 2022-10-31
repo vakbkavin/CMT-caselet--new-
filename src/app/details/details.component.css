@@ -1,0 +1,190 @@
+.selection{
+  padding-top: 100px;
+  
+}
+
+.accordion, .accordion-item, .accordion-header, .accordion-button, .accordion-collapse, .accordion-body{
+  border: none;
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+  background-color: white;
+}
+
+.accordion-button {
+  border-top: 2px solid rgb(158, 146, 146);
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 4px 0;
+}
+
+.accordion-body{
+  padding: 15px 0;
+}
+.model-color{
+margin-bottom: 35px;
+}
+.product-color{
+  padding-bottom: 25px;
+}
+
+
+
+/* :focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+} */
+
+.review{
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+  padding-left: 8px;
+}
+
+.star{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dot {
+    height: 35px;
+    width: 35px;
+    margin-right: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    border: none;
+  
+  }
+  
+  
+  .dot-1{
+    background-color:#9BB5CE;
+  }
+  .dot-2{
+    background-color:#570861;
+  }
+  .dot-3{
+    background-color:#171E27;
+  }
+  .dot-4{
+    background-color:#A50011;
+  }
+  .dot-5{
+    background-color:#F9F3EE;
+  }
+
+  .product-color{
+    display: flex;
+    flex: right;
+  }
+
+  img{
+  width:450px;
+  height:500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  nav{
+    border-bottom: 2px solid #8a8786;
+    padding-bottom: 0;
+  }
+  .nav-link{
+    color:#616060;
+    border-bottom: 4px solid transparent;
+  }
+
+  .nav-tabs{
+    width:100%;
+  }
+  .nav-item{
+    cursor: pointer;
+  }
+  
+  .nav-link:hover, .color {
+    border-bottom: 4px solid #ED3907;
+    color: black;
+    font-weight: bold;
+  }
+
+
+
+  .priceCard{
+    margin-top: 10px;
+    padding: 0;
+  }
+.P-card{
+  padding: 0 10px;
+  
+}
+.card{
+  border-radius: 0;
+  cursor: pointer;
+ 
+}
+.card:hover, a:active, .color-card {
+  border-top: 4px solid #ED3907;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  color: black;
+  font-weight: bold;
+}
+
+
+  .card-body{
+    padding: 0;
+  }
+  .card-text{
+    padding: 0;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  span{
+    font-weight: 100;
+    font-size: 15px;
+  }
+
+  .emi-details{
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .policy-link{
+    color: black;
+    font-weight: 100;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .overview{
+    margin: 25px 0;
+    font-weight: 100;
+  }
+
+  .features-link{
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: black;
+    cursor: pointer;
+  }
+
+  .disclaimer{
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+  }
+
+  .warning{
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+
+  

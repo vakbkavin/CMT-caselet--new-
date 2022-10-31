@@ -1,0 +1,56 @@
+<app-home></app-home>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 col-md-3 card " *ngFor="let product of productList, index as ind">
+      <p class="content-trade">{{product.discount}}</p>
+      <img src="{{product.mobile}}" alt="" class=" image-cap" />
+      <p class="product-name">{{product.mobile_model}}</p>
+      <p class="product-notes">{{product.emi}}</p>
+      <a href="#" class="product-notes" routerLink="/details">Details</a>
+      <p class="product-notes">{{product.offer}}</p>
+      <p class="product-notes">{{product.retail_price}}</p>
+      <div class="product-color">
+        <a href=""><span class="dot dot-1"></span></a>
+        <a href=""><span class="dot dot-2"></span></a>
+        <a href=""><span class="dot dot-3"></span></a>
+        <a href=""><span class="dot dot-4"></span></a>
+        <a href=""><span class="dot dot-5"></span></a>
+      </div>
+      <label class="product-compare">
+        <input type="checkbox" class="compare-checkbox" (click)=onCheck($event,product,ind) />
+        <span class="checkmark "></span>
+        Compare
+        <span><i class="far fa-heart float-end"></i></span>
+      </label>
+    </div>
+    <div class="col-6 col-md-3 card" *ngFor="let prod of newProductList">
+      <img class="upcoming-product image-cap img-fluid rounded" src="{{prod.newLaunchPoster}}" alt="" />
+      <p class="product-name">{{prod.title}}</p>
+      <p class="product-notes">
+        {{prod.description}}
+      </p>
+      <div>
+        <a class="product-purchase" href="#">Buy</a><span><i class="fas fa-angle-right"></i></span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="slide-bottom" *ngIf="compareList.length>0">
+
+    <div class="row row-col-1 row-cols-md-4  ">
+      <div class="col d-flex justify-content-center align-items-center" *ngFor="let prod of compareList">
+        <div class="card mb-3 compare-card w-50">
+          <div class="card-body">
+            <img src="{{prod.mobile}}" class="img-fluid rounded-start h-50" alt="...">
+            <h5 class="card-title">{{prod.mobile_model}}</h5>
+            <p class="card-text">{{prod.retail_price}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
