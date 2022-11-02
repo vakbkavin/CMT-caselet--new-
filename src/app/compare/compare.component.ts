@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewLaunchService } from '../shared/new-launch.service';
 
 @Component({
   selector: 'app-compare',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompareComponent implements OnInit {
 
-  constructor() { }
+  compareList:any;
+
+  constructor(private newLaunchapi:NewLaunchService) { }
 
   ngOnInit(): void {
+    this.newLaunchapi.compareListArray$.subscribe(data=>{
+      this.compareList = data;
+      
+    })
   }
 
 }

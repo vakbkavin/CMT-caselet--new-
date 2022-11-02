@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NewLaunchService } from 'src/app/shared/new-launch.service';
 import { ProductsService } from 'src/app/shared/products.service';
 // import {FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms'
@@ -14,9 +15,10 @@ export class AllComponent implements OnInit {
 productList:any = [];
 newProductList:any;
 compareList:any = [];
+unCheck?:any;
 
 
-  constructor(private productapi:ProductsService, private newProductapi:NewLaunchService ) {}
+  constructor(private productapi:ProductsService, private newProductapi:NewLaunchService, private router:Router ) {}
 
   ngOnInit(): void {
     this.productapi.getNewProduct().subscribe((product:any)=>{
@@ -30,29 +32,43 @@ compareList:any = [];
     this.newProductapi.getNewLaunch().subscribe((newProduct:any)=>{
       this.newProductList = newProduct;
     })
-
-
 }
 
 
+onCheck(event:any, product:any){
 
-onCheck(event:any, product:any, index:any){
+  this.unCheck = event;
 
-  console.log(index);
   if(event.target.checked === true){
     this.compareList.push(product);
   }else{
    this.compareList.filter((item:any, index:any)=>{
-    if(product.id=== item.id){
+    if(product.id === item.id){
       this.compareList.splice(index,1);
     }
    })
   }
-
-
-
 console.log(this.compareList);
-console.log(event);
 }
+
+onClose(product:any){
+
+  console.log(this.unCheck);
+  this.compareList.filter((item:any, index:any)=>{
+    if(product.id=== item.id){
+      this.compareList.splice(index,1);
+    }
+   })
+
+   this.unCheck.target.checked = false;
+   console.log(this.unCheck);
+}
+
+onCompare(){
+  this.newProductapi.compareListArray$.next(this.compareList);
+  console.log(this.newProductapi.compareListArray$.getValue());
+  this.router.navigateByUrl('/compare');
+}
+
 
 }

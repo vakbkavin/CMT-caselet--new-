@@ -1,17 +1,18 @@
-.navbar{
+.navbar {
   padding-top: 0;
 }
 
-nav{
+nav {
   padding-bottom: 0;
 }
-.nav-link{
+.nav-link {
   border-bottom: 4px solid transparent;
-  color:#616060;
+  color: #616060;
 }
 
-.nav-link:hover, a:active {
-  border-bottom: 4px solid #ED3907;
+.nav-link:hover,
+a:active {
+  border-bottom: 4px solid #ed3907;
   color: black;
   font-weight: bold;
 }

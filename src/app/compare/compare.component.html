@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-6 col-md-3" *ngFor="let product of compareList">
+        <div class="card">
+            <p class="content-trade">{{product.discount}}</p>
+            <img src="{{product.mobile}}" alt="" class=" image-cap" />
+            <p class="product-name">{{product.mobile_model}}</p>
+            <p class="product-notes">{{product.emi}}</p>
+            <a class="product-notes" routerLink="/details">Details</a>
+            <p class="product-notes">{{product.offer}}</p>
+            <p class="product-notes">{{product.retail_price}}</p>
+        </div>
+    </div>
+</div>

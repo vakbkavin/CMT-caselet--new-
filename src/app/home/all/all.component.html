@@ -17,7 +17,7 @@
         <a href=""><span class="dot dot-5"></span></a>
       </div>
       <label class="product-compare">
-        <input type="checkbox" class="compare-checkbox" (click)=onCheck($event,product,ind) />
+        <input type="checkbox" class="compare-checkbox" (click)=onCheck($event,product) />
         <span class="checkmark "></span>
         Compare
         <span><i class="far fa-heart float-end"></i></span>
@@ -37,12 +37,14 @@
 
 
 
-  <div class="slide-bottom" *ngIf="compareList.length>0">
+  <div class="slide-bottom container-fluid" *ngIf="compareList.length>0">
 
-    <div class="row row-col-1 row-cols-md-4  ">
-      <div class="col d-flex justify-content-center align-items-center" *ngFor="let prod of compareList">
+    <div class="row row-col-1 row-cols-md-3  ">
+      <div class="col d-flex justify-content-center align-items-center p-0" *ngFor="let prod of compareList">
         <div class="card mb-3 compare-card w-50">
           <div class="card-body">
+            <button type="button" class="btn-close d-flex justify-content-end" aria-label="Close"
+              (click)="onClose(prod)"></button>
             <img src="{{prod.mobile}}" class="img-fluid rounded-start h-50" alt="...">
             <h5 class="card-title">{{prod.mobile_model}}</h5>
             <p class="card-text">{{prod.retail_price}}</p>
@@ -50,7 +52,11 @@
         </div>
       </div>
     </div>
+    <div class="col d-flex justify-content-center align-items-center p-0">
+      <button class="btn-primary" (click)="onCompare()">Compare</button>
+    </div>
 
   </div>
+
 
 </div>
