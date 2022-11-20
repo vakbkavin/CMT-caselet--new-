@@ -1,0 +1,32 @@
+
+.mat-mdc-radio-button .mat-mdc-radio-button {
+  margin-left: 16px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.container-fluid{
+  background-image: url("../../../assets/img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+mat-card{
+  background-color: #2D3248;
+  color: white;
+
+}
+*{
+  color: white;
+}
+
+
+
